@@ -1,0 +1,50 @@
+:root {
+    --background-color: rgb(59, 57, 71);
+    --contrast-color: black;
+    --contrast-color-faded: rgba(0, 0, 0, .5);
+    --active-color: rgb(255, 218, 106);
+    --gameboard-color: rgb(113, 108, 145);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.cell {
+    width: 1em;
+    height: 1em;
+
+    outline: 1px solid var(--contrast-color-faded)
+}
+
+.cell--active {
+    background-color: var(--active-color);
+}
+
+.house {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;    
+
+    outline: 1px solid var(--contrast-color)
+}
+
+#gameboard {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;   
+
+    width: max-content;
+    height: max-content;
+
+    border-radius: .25em;
+    overflow: hidden;
+
+    font-size: 3em;
+
+    background-color: var(--gameboard-color);
+    outline: 1px solid var(--contrast-color);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
