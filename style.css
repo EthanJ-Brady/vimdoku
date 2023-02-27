@@ -18,6 +18,7 @@ body {
 }
 
 .cell--active {
+    animation: background-blinker 1s step-end infinite;
     background-color: var(--active-color);
 }
 
@@ -45,6 +46,11 @@ body {
     font-size: 3em;
 
     background-color: var(--gameboard-color);
-    outline: 1px solid var(--contrast-color);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+@keyframes background-blinker {
+    50% {
+        background-color: revert;
+    }
 }
